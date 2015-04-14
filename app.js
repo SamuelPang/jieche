@@ -8,7 +8,7 @@ var express = require('express')
 ,routes = require('./routes/index')
 ,users = require('./routes/users');
 
-var session = require('express-session');
+var SessionStore = require('express-session');
 //var errorHandler = require('errorhandler');
 var app = express();
 
@@ -36,6 +36,7 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
 
 // error handlers
 

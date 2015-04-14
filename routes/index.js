@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+var movie = require('./movie');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { 
@@ -39,5 +39,10 @@ router.get('/home', function(req, res, next) {
 	user: user
 	});
 });
+
+router.get('/movie/add', movie.movieAdd);
+router.post('/movie/add', movie.doMovieAdd);
+router.get('/movie/:name', movie.movieAdd);
+router.get('/movie/json/:name', movie.movieJSON);
 
 module.exports = router;
