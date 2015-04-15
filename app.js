@@ -8,7 +8,7 @@ var express = require('express')
 ,routes = require('./routes/index')
 ,users = require('./routes/users');
 
-var SessionStore = require('express-session');
+var session = require('express-session');
 //var errorHandler = require('errorhandler');
 var app = express();
 
@@ -26,6 +26,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session(
+  {
+    secret:'just a key',
+    cookei:{ maxAge: 60*1000}
+  }
+));
 
 app.use('/', routes);
 app.use('/users', users);
