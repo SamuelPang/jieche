@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<meta charset="UTF-8">
+<script src="../public/javascripts/jquery-2.1.1.min.js"></script>
+<script src="../public/javascripts/semantic.min.js"></script>
+<link href="../public/stylesheets/semantic.min.css" rel="stylesheet" media="screen">
+<head>
+  <title>JIECHE-SA</title>
+</head>
+<body>
+  <h1 align="center" class = "ui inverted blue block header">SA</h1>      
+  <div class="ui action input">
+    <input type="text" placeholder = "Car">
+    <div class="ui blue right labeled icon button">
+      <i class="search icon"></i>
+      查询
+    </div>
+  </div>
+  <div class="ui error form segment">
+    <div class="ui error message">
+      <div class="header">Action Forbidden</div>
+      <p>You can only sign up for an account once with a given e-mail address.</p>
+    </div> 
+    <div class="ui compact menu">
+      <div class="ui simple dropdown item">
+        <i class="car red icon"></i>
+        Car Type selection        
+        <div class="menu">
+          <div class="item">一汽大众</div>
+          <div class="item">广州本田</div>
+          <div class="item">others</div>
+        </div>
+      </div>
+    </div>  
+    <div class="inline field">
+      <div class="ui checkbox">
+        <input type="checkbox">
+        <label>Project 1 </label>
+      </div>
+      <div class="ui checkbox">
+        <input type="checkbox">
+        <label>Project 2 </label>
+      </div>
+      <div class="ui checkbox">
+        <input type="checkbox">
+        <label>Project 3 </label>
+      </div>
+    </div>
+    <div class="ui red submit button">Start</div>
+  </div>
+  <div class="ui steps">
+    <div class="ui disabled step">
+      Project 1
+    </div>
+    <div class="ui disabled step">
+      Project 3
+    </div>
+    <div class="ui active step">
+      Project 4
+    </div>
+    <div class="ui disabled step">
+      完成
+    </div>
+  </div>
+</body>
+</html>
